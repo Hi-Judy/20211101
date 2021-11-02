@@ -19,6 +19,15 @@
 	</servlet-mapping>
 	
 <!-- tiles configuration end -->
+   <error-page>
+   		<error-code>404</error-code>
+   		<location>/WEB-INF/views/home/404error.jsp</location>
+   </error-page>
+   
+   <error-page>
+   		<error-code>500</error-code>
+   		<location>/WEB-INF/views/home/500error.jsp</location>
+   </error-page>
    
    <welcome-file-list>
    		<welcome-file>index.jsp</welcome-file>

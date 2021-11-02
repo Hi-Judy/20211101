@@ -12,11 +12,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import co.micol.prj.comm.Command;
+import co.micol.prj.command.AjaxMemberList;
+import co.micol.prj.command.AjaxTest;
+import co.micol.prj.command.Charts;
 import co.micol.prj.command.HomeCommand;
 import co.micol.prj.command.Logout;
 import co.micol.prj.command.MemberList;
 import co.micol.prj.command.MemberLogin;
 import co.micol.prj.command.MemberLoginForm;
+import co.micol.prj.command.RegisterForm;
+import co.micol.prj.command.RegisterMember;
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
@@ -34,7 +39,13 @@ public class FrontController extends HttpServlet {
 		map.put("/memberLoginForm.do", new MemberLoginForm()); // 로그인 폼 호출
 		map.put("/memberLogin.do", new MemberLogin()); //로그인 처리
 		map.put("/memberList.do", new MemberList()); //멤버 목록
-	}
+		map.put("/registerForm.do", new RegisterForm()); //회원가입 폼 호출
+		map.put("/registerMember.do", new RegisterMember()); //회원가입 처리
+		map.put("/charts.do", new Charts()); //차트 보여주기
+		map.put("/ajaxTest.do", new AjaxTest()); //ajax 테스트 폼 호출
+		map.put("/ajaxMemberList.do", new AjaxMemberList()); //
+		
+		}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// 요청 분석 실행

@@ -9,7 +9,7 @@
 	</select>
 	
 	<insert id="insertMember" parameterType="co.micol.prj.member.service.MemberVO">
-		
+		insert into member values (#{id},#{password},#{name},#{address},#{tel},#{author})
 	</insert>
 	
 	<delete id="deleteMember" parameterType="co.micol.prj.member.service.MemberVO">

@@ -77,7 +77,7 @@
 											Password?</a>
 									</div>
 									<div class="text-center">
-										<a class="small" href="registerMember.do">Create an Account!</a>
+										<a class="small" href="registerForm.do">회원가입</a>
 									</div>
 								</div>
 							</div>

@@ -32,8 +32,6 @@
 <!-- Page level plugins -->
 <script src="vendor/chart.js/Chart.min.js"></script>
 
-
-
 </head>
 <body id="page-top">
 	<!-- Page Wrapper -->
