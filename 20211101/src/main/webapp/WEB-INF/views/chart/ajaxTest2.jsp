@@ -12,11 +12,11 @@
 <script type="text/javascript">
 $(document).ready(function() {
 	$.ajax({
-		url: 'ajaxMemberList.do',
-		type: 'POST',
-		dataType: 'json',
+		url: "ajaxMemberList.do",
+		type: "POST",
+		dataType: "json",
 		success: function(data){
-			$.each(data.length>0){
+			if(data.length>0){
 				var tb = $("<tbody />")
 				for(var i in data){
 					var id = data[i].id;
@@ -26,11 +26,11 @@ $(document).ready(function() {
 					var author = data[i].author;
 					
 					var tr=$("<tr />").append(
-						$("<td />").text(id);
-						$("<td />").text(name);
-						$("<td />").text(address);
-						$("<td />").text(tel);
-						$("<td />").text(author);
+						$("<td />").text(id),
+						$("<td />").text(name),
+						$("<td />").text(address),
+						$("<td />").text(tel),
+						$("<td />").text(author)
 					);
 					tb.append(tr);
 				}
